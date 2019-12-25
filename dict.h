@@ -2,6 +2,8 @@
 #ifndef DICT_H_
 #define DICT_H_
 
+#include "list.h"
+
 /* This struct is the foundation of our trie */
 typedef struct letters {
 
@@ -17,12 +19,14 @@ Letters * newLetters();
 
 void strip_newline(char *string);
 
-int check_string(char *string);
+int check_string_lower(char *string);
 
 void add_word(Letters *dict, char *buf);
 
 void load_dictionary(Letters *dict);
 
 int find_word(Letters *dict, char *word);
+
+int check_path(Letters *dict, char *board, IntList *path);
 
 #endif

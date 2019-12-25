@@ -1,7 +1,8 @@
-#include "dict.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#include "dict.h"
 
 
 /* Build a new Letter struct and return it */
@@ -32,7 +33,7 @@ void strip_newline(char *string)
 }
 
 /* Check to make sure our string only has lowercase letters */
-int check_string(char *string)
+int check_string_lower(char *string)
 {
     int iter = 0;
     int count = strlen(string) - 1;
@@ -88,7 +89,7 @@ void load_dictionary(Letters *dict)
     while ( fgets(buf, 80, fd) != NULL )
     {
         // Get rid of any string that isn't made of only lowercase letters
-        if (check_string(buf) == 0)
+        if (check_string_lower(buf) == 0)
             continue;
 
         // Get rid of the newline that comes in by default from fgets
@@ -97,6 +98,43 @@ void load_dictionary(Letters *dict)
         // Obviously add the word
         add_word(dict, buf);
     }
+}
+
+int check_path(Letters *dict, char *board, IntList *path)
+{
+
+    IntListObject *wordStep;
+    Letters *dictStep;
+    char c;
+    int i;
+
+    dictStep = dict;
+    wordStep = path->head;
+
+    while(wordStep)
+    {
+        c = board[wordStep->x];
+        // c = wordStep->x; // - 97;
+        printf("check: %d\n", c);
+
+        // return -1 if the string of letters is not in the dictionary
+        if (dictStep->letters[c] == NULL)
+            return -1;
+
+        dictStep = dictStep->letters[c];
+        wordStep = wordStep->next;
+    }
+
+    if (path->count < 3)
+        return 0;
+
+    // return 1 if we get to the end of a word
+    if (dictStep->end_of_word == 1)
+        return 1;
+
+    // return 0 if the string exists but is not a full word
+    return 0;
+
 }
 
 /* Check to see if a word is in our dictionary */
