@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Create a new integer list */
 IntList * new_int_list()
 {
     IntList *tmpList = (IntList *) malloc(sizeof(IntList));
@@ -12,11 +13,13 @@ IntList * new_int_list()
     return tmpList;
 }
 
+/* Create a new integer list object */
 IntListObject * new_int_list_object(int x)
 {
 
     IntListObject *tmpListObject = (IntListObject *) malloc(sizeof(IntListObject));
 
+    // Set the default values
     tmpListObject->next = NULL;
     tmpListObject->prev = NULL;
     tmpListObject->x = x;
@@ -25,12 +28,15 @@ IntListObject * new_int_list_object(int x)
 
 }
 
+/* Print out the list */
 void print_int_list(IntList *list)
 {
+
     int i = 0;
     IntListObject *step;
     step = list->head;
 
+    // Loop through the objects in the list
     while(step)
     {
         printf("%d ", step->x);
@@ -40,19 +46,23 @@ void print_int_list(IntList *list)
 
 }
 
+/* Append a new integer list object to the front of the integer list */
 void append_front_int_list(IntList *list, int x)
 {
+
     IntListObject *head;
     IntListObject *newItem;
 
     newItem = new_int_list_object(x);
 
+    // If the list already has at least one entry
     if (list->head)
     {
         head = list->head;
         head->prev = newItem;
         newItem->next = head;
     }
+    // If the list is emtpy
     else
     {
         list->tail = newItem;
@@ -63,19 +73,23 @@ void append_front_int_list(IntList *list, int x)
 
 }
 
+/* Append a new intger list object to the back of the list */
 void append_back_int_list(IntList *list, int x)
 {
+
     IntListObject *tail;
     IntListObject *newItem;
 
     newItem = new_int_list_object(x);
 
+    // If the list is not empty
     if (list->tail)
     {
         tail = list->tail;
         tail->next = newItem;
         newItem->prev = tail;
     }
+    // If the list is empty
     else
     {
         list->head = newItem;
@@ -86,8 +100,10 @@ void append_back_int_list(IntList *list, int x)
 
 }
 
+/* Remove the last entry from the back of the list and return the integer value */
 int pop_back_int_list(IntList *list)
 {
+
     IntListObject *prev;
     IntListObject *tail;
 
@@ -100,12 +116,14 @@ int pop_back_int_list(IntList *list)
 
     list->count -= 1;
 
+    // If we remove the last object from the list, fix the head pointer as well
     if (list->count == 0)
         list->head = NULL;
 
     return retInt;
 }
 
+/* Remove the last entry from the front of the list and return the integer value */
 int pop_front_int_list(IntList *list)
 {
     IntListObject *next;
@@ -120,12 +138,14 @@ int pop_front_int_list(IntList *list)
 
     list->count -= 1;
 
+    // If we remove the last object from the list, fix the tail pointer as well
     if (list->count == 0)
         list->tail = NULL;
 
     return retInt;
 }
 
+/* Check to see if a given integer is in our list */
 int in_int_list(IntList *list, int x)
 {
     IntListObject *step;
@@ -133,9 +153,11 @@ int in_int_list(IntList *list, int x)
 
     while(step)
     {
+        // Return 1 if we find the integer
         if (step->x == x)
             return 1;
         step = step->next;
     }
+    // Return 0 since we got to the end and didn't find the integer
     return 0;
 }

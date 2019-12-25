@@ -3,10 +3,11 @@
 #include <stdlib.h>
 
 
+/* Check some int list functions */
 void test_int_list()
 {
-    int i = 0;
 
+    int i = 0;  // iterator
 
     // Test one
     printf("List Test: append back pop back\n");

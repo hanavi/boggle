@@ -8,8 +8,8 @@
 
 int main(int argc, char *argv[])
 {
-    int iter = 0;
-    char buf[80];
+    int iter = 0;  // For iterating
+    char buf[80];  // For storing the word to be checked
 
     // Load the dictionary
     Letters *dict;

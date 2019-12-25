@@ -2,21 +2,29 @@
 #define _LIST_H_
 
 
+/* Integer linked list object */
 typedef struct int_list_object
 {
 
+    // The next and previous entries in our linked list
     struct int_list_object *next;
     struct int_list_object *prev;
+
+    // The value we actually care about
     int x;
 
 } IntListObject;
 
 
+/* Wrapper for a linked list of integer list objects */
 typedef struct int_list
 {
 
+    // the first and last entries in our linked list
     struct int_list_object *head;
     struct int_list_object *tail;
+
+    // Keep track of the number of entries in the list
     int count;
 
 } IntList;
