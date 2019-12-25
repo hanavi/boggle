@@ -1,7 +1,25 @@
-#include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "list.h"
+
+void test_word_list()
+{
+    WordList *list = new_word_list();
+
+    append_back_word_list(list, "this");
+    append_back_word_list(list, "is");
+    append_back_word_list(list, "the");
+    append_back_word_list(list, "beginning");
+
+    append_front_word_list(list, "this");
+    append_front_word_list(list, "is");
+    append_front_word_list(list, "the");
+    append_front_word_list(list, "beginning");
+
+    print_word_list(list);
+
+}
 
 /* Check some int list functions */
 void test_int_list()
@@ -23,6 +41,7 @@ void test_int_list()
         int x = pop_back_int_list(list);
         printf("%d ", x);
     }
+
     printf("\n");
     printf("head: %d\n", list->head);
     printf("tail: %d\n", list->tail);
@@ -95,8 +114,8 @@ void test_int_list()
 int main(int argc, char *argv[])
 {
 
-
-    test_int_list();
+    // test_int_list();
+    test_word_list();
 
     return 0;
 }
