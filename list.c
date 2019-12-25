@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-IntList * new_list_list()
+IntList * new_int_list()
 {
     IntList *tmpList = (IntList *) malloc(sizeof(IntList));
     tmpList->head = NULL;
@@ -124,4 +124,18 @@ int pop_front_int_list(IntList *list)
         list->tail = NULL;
 
     return retInt;
+}
+
+int in_int_list(IntList *list, int x)
+{
+    IntListObject *step;
+    step = list->head;
+
+    while(step)
+    {
+        if (step->x == x)
+            return 1;
+        step = step->next;
+    }
+    return 0;
 }

@@ -21,7 +21,7 @@ typedef struct int_list
 
 } IntList;
 
-IntList * new_list_list();
+IntList * new_int_list();
 
 IntListObject * new_int_list_object(int x);
 
@@ -34,5 +34,7 @@ void print_int_list(IntList *list);
 void append_front_int_list(IntList *list, int x);
 
 int pop_front_int_list(IntList *list);
+
+int in_int_list(IntList *list, int x);
 
 #endif
