@@ -5,8 +5,6 @@
 #include "board.h"
 #include "list.h"
 
-// For now we have a fixed 5x5 grid board (maybe this will become dynamic?)
-#define SIZE 5
 
 /* Generate a random array of letters to use as a boggle board */
 char * generate_random_boggle_board()

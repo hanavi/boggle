@@ -2,8 +2,11 @@ CFLAGS = -g
 
 all: boggle
 
-boggle: main.o list.o dict.o
-	gcc $(CFLAGS) -o boggle main.o list.o dict.o
+boggle: main.o list.o dict.o board.o solve.o
+	gcc $(CFLAGS) -o boggle main.o list.o dict.o board.o solve.o
+
+solve.o: solve.h solve.c
+	gcc $(CFLAGS) -c solve.c
 
 dict.o: dict.c dict.h
 	gcc $(CFLAGS) -c dict.c

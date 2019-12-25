@@ -27,6 +27,8 @@ void load_dictionary(Letters *dict);
 
 int find_word(Letters *dict, char *word);
 
-int check_path(Letters *dict, char *board, IntList *path);
+int check_path_letters(Letters *dict, char *board, IntList *path);
+
+char *get_word_from_path(IntList* path, char *board);
 
 #endif

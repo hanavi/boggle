@@ -28,42 +28,42 @@ void test_string()
 
     append_back_int_list(path, (char) 't' - 97);
     print_int_list(path);
-    status = check_path(dict, board, path);
+    status = check_path_letters(dict, board, path);
     printf("%d\n", status);
 
     append_back_int_list(path, (char) 'r' - 97);
     print_int_list(path);
-    status = check_path(dict, board, path);
+    status = check_path_letters(dict, board, path);
     printf("%d\n", status);
 
     append_back_int_list(path, (char) 'e' - 97);
     print_int_list(path);
-    status = check_path(dict, board, path);
+    status = check_path_letters(dict, board, path);
     printf("%d\n", status);
 
     append_back_int_list(path, (char) 'e' - 97);
     print_int_list(path);
-    status = check_path(dict, board, path);
+    status = check_path_letters(dict, board, path);
     printf("%d\n", status);
 
     append_back_int_list(path, (char) 's' - 97);
     print_int_list(path);
-    status = check_path(dict, board, path);
+    status = check_path_letters(dict, board, path);
     printf("%d\n", status);
 
     append_back_int_list(path, (char) 'i' - 97);
     print_int_list(path);
-    status = check_path(dict, board, path);
+    status = check_path_letters(dict, board, path);
     printf("%d\n", status);
 
     append_back_int_list(path, (char) 'n' - 97);
     print_int_list(path);
-    status = check_path(dict, board, path);
+    status = check_path_letters(dict, board, path);
     printf("%d\n", status);
 
     append_back_int_list(path, (char) 'g' - 97);
     print_int_list(path);
-    status = check_path(dict, board, path);
+    status = check_path_letters(dict, board, path);
     printf("%d\n", status);
 
 }

@@ -5,8 +5,10 @@
 #include "main.h"
 #include "dict.h"
 #include "list.h"
+#include "solve.h"
+#include "board.h"
 
-int main(int argc, char *argv[])
+void run_check(int argc, char *argv[])
 {
     int iter = 0;  // For iterating
     char buf[80];  // For storing the word to be checked
@@ -38,6 +40,25 @@ int main(int argc, char *argv[])
         printf("%s is a word!\n",buf);
     else
         printf("%s is NOT a word!\n",buf);
+
+}
+
+int main(int argc, char *argv[])
+{
+
+    // Load the dictionary
+    Letters *dict;
+    dict = newLetters();
+    load_dictionary(dict);
+
+    char *boggleBoard = generate_random_boggle_board();
+
+    WordList *words = new_word_list();
+
+    solve_boggle_board(boggleBoard, dict, words);
+
+    print_boggle_board(boggleBoard);
+    print_word_list(words);
 
     return 0;
 }

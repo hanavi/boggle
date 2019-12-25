@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include "dict.h"
+#include "board.h"
 
 
 /* Build a new Letter struct and return it */
@@ -100,7 +101,7 @@ void load_dictionary(Letters *dict)
     }
 }
 
-int check_path(Letters *dict, char *board, IntList *path)
+int check_path_letters(Letters *dict, char *board, IntList *path)
 {
 
     IntListObject *wordStep;
@@ -113,9 +114,9 @@ int check_path(Letters *dict, char *board, IntList *path)
 
     while(wordStep)
     {
-        c = board[wordStep->x];
-        // c = wordStep->x; // - 97;
-        printf("check: %d\n", c);
+        c = board[wordStep->x] - 97;
+        // c = board[wordStep->x];
+        // c = wordStep->x // - 97;
 
         // return -1 if the string of letters is not in the dictionary
         if (dictStep->letters[c] == NULL)
@@ -125,6 +126,7 @@ int check_path(Letters *dict, char *board, IntList *path)
         wordStep = wordStep->next;
     }
 
+    // return 0 if it is a possible string path but the word is too short
     if (path->count < 3)
         return 0;
 
@@ -168,5 +170,32 @@ int find_word(Letters *dict, char *word)
 
     // if we get to here, the string should be a word in the dict
     return 1;
+}
+
+char *get_word_from_path(IntList* path, char *board)
+{
+    char *buf;
+    int n = 0;
+    int i = 0;
+    char c = 0;
+    int bufSize = path->count + 1;
+
+    buf = (char *) malloc(bufSize*sizeof(char));
+
+
+    IntListObject *step;
+    step = path->head;
+    while(step)
+    {
+        n = step->x;
+        c = board[n];
+        buf[i] = c;
+        step = step->next;
+        i += 1;
+    }
+
+    buf[i] = '\0';
+    //printf("%s", buf);
+    return buf;
 }
 
