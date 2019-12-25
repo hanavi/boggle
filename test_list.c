@@ -10,14 +10,14 @@ void test_int_list()
 
     // Test one
     printf("List Test: append back pop back\n");
-    IntList *list = new_list_list(0);
+    IntList *list = new_list_list();
     for (i = 0; i < 10; ++i)
     {
         append_back_int_list(list, i+1);
     }
     print_int_list(list);
 
-    while(list->count >= 0)
+    while(list->count > 0)
     {
         int x = pop_back_int_list(list);
         printf("%d ", x);
@@ -30,14 +30,14 @@ void test_int_list()
 
     // Test two
     printf("List Test: append front pop back\n");
-    list = new_list_list(0);
+    list = new_list_list();
     for (i = 0; i < 10; ++i)
     {
         append_front_int_list(list, i+1);
     }
     print_int_list(list);
 
-    while(list->count >= 0)
+    while(list->count > 0)
     {
         int x = pop_back_int_list(list);
         printf("%d ", x);
@@ -50,14 +50,14 @@ void test_int_list()
 
     // Test three
     printf("List Test: append front pop front\n");
-    list = new_list_list(0);
+    list = new_list_list();
     for (i = 0; i < 10; ++i)
     {
         append_front_int_list(list, i+1);
     }
     print_int_list(list);
 
-    while(list->count >= 0)
+    while(list->count > 0)
     {
         int x = pop_front_int_list(list);
         printf("%d ", x);
@@ -70,14 +70,14 @@ void test_int_list()
 
     // Test four
     printf("List Test: append back pop front\n");
-    list = new_list_list(0);
+    list = new_list_list();
     for (i = 0; i < 10; ++i)
     {
         append_back_int_list(list, i+1);
     }
     print_int_list(list);
 
-    while(list->count >= 0)
+    while(list->count > 0)
     {
         int x = pop_front_int_list(list);
         printf("%d ", x);

@@ -21,7 +21,7 @@ typedef struct int_list
 
 } IntList;
 
-IntList * new_list_list(int x);
+IntList * new_list_list();
 
 IntListObject * new_int_list_object(int x);
 

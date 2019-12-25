@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-IntList * new_list_list(int x)
+IntList * new_list_list()
 {
     IntList *tmpList = (IntList *) malloc(sizeof(IntList));
-    tmpList->head = new_int_list_object(x);
-    tmpList->tail = tmpList->head;
+    tmpList->head = NULL;
+    tmpList->tail = NULL;
     tmpList->count = 0;
 
     return tmpList;
@@ -45,12 +45,19 @@ void append_front_int_list(IntList *list, int x)
     IntListObject *head;
     IntListObject *newItem;
 
-    head = list->head;
-
     newItem = new_int_list_object(x);
 
-    head->prev = newItem;
-    newItem->next = head;
+    if (list->head)
+    {
+        head = list->head;
+        head->prev = newItem;
+        newItem->next = head;
+    }
+    else
+    {
+        list->tail = newItem;
+    }
+
     list->head = newItem;
     list->count += 1;
 
@@ -61,12 +68,19 @@ void append_back_int_list(IntList *list, int x)
     IntListObject *tail;
     IntListObject *newItem;
 
-    tail = list->tail;
-
     newItem = new_int_list_object(x);
 
-    tail->next = newItem;
-    newItem->prev = tail;
+    if (list->tail)
+    {
+        tail = list->tail;
+        tail->next = newItem;
+        newItem->prev = tail;
+    }
+    else
+    {
+        list->head = newItem;
+    }
+
     list->tail = newItem;
     list->count += 1;
 
