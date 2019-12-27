@@ -2,18 +2,19 @@
 
 #include "dict.h"
 #include "board.h"
-#include "list.h"
+#include "lists.h"
 
 
 
 void test_string()
 {
     int i;
-    // char *board = generate_random_boggle_board();
     char board[25];
+
+    // Fill the board with a-y
     for (i = 0; i < 24; ++i)
     {
-        board[i] = i;
+        board[i] = i + 97;
     }
 
     int status = 0;

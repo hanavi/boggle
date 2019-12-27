@@ -1,7 +1,7 @@
 #ifndef BOARD_H_
 #define BOARD_H_
 
-#include "list.h"
+#include "lists.h"
 
 // For now we have a fixed 5x5 grid board (maybe this will become dynamic?)
 #define SIZE 5

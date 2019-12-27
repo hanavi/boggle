@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "board.h"
-#include "list.h"
+#include "lists.h"
 
 /* Run a simple check of the neighbors for a given entry */
 int check_neighbors()

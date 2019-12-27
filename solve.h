@@ -1,7 +1,7 @@
 #ifndef _SOLVE_H_
 #define _SOLVE_H_
 
-#include "list.h"
+#include "lists.h"
 #include "dict.h"
 #include "board.h"
 

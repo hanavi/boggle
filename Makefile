@@ -14,8 +14,8 @@ dict.o: dict.c dict.h
 main.o: main.h main.c
 	gcc $(CFLAGS) -c main.c
 
-list.o: list.h list.c
-	gcc $(CFLAGS) -c list.c
+list.o: lists.h lists.c
+	gcc $(CFLAGS) -c lists.c
 
 board.o: board.c board.h
 	gcc $(CFLAGS) -c board.c
@@ -26,8 +26,8 @@ test_board.o: test_board.c
 test_board: board.o test_board.o list.o
 	gcc $(CFLAGS) -o test_board board.o test_board.o list.o
 
-test_list.o: test_list.c
-	gcc $(CFLAGS) -c test_list.c
+test_list.o: test_lists.c
+	gcc $(CFLAGS) -c test_lists.c
 
 test_list: list.o test_list.o
 	gcc $(CFLAGS) -o test_list list.o test_list.o

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "list.h"
+#include "lists.h"
 
 void test_word_list()
 {

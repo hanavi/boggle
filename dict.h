@@ -2,7 +2,7 @@
 #ifndef DICT_H_
 #define DICT_H_
 
-#include "list.h"
+#include "lists.h"
 
 /* This struct is the foundation of our trie */
 typedef struct letters {

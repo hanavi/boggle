@@ -3,7 +3,7 @@
 #include <time.h>
 
 #include "board.h"
-#include "list.h"
+#include "lists.h"
 
 
 /* Generate a random array of letters to use as a boggle board */

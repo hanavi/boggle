@@ -4,7 +4,7 @@
 
 #include "main.h"
 #include "dict.h"
-#include "list.h"
+#include "lists.h"
 #include "solve.h"
 #include "board.h"
 
