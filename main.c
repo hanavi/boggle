@@ -44,6 +44,7 @@ void run_check(int argc, char *argv[])
 
 }
 
+
 int main(int argc, char *argv[])
 {
 
@@ -78,6 +79,7 @@ int main(int argc, char *argv[])
 
     GObject *window = gtk_builder_get_object(builder, "window");
 
+
     GObject *label0 = gtk_builder_get_object(builder, "entry_0");
     GObject *label1 = gtk_builder_get_object(builder, "entry_1");
     GObject *label2 = gtk_builder_get_object(builder, "entry_2");
@@ -103,6 +105,8 @@ int main(int argc, char *argv[])
     GObject *label22 = gtk_builder_get_object(builder, "entry_22");
     GObject *label23 = gtk_builder_get_object(builder, "entry_23");
     GObject *label24 = gtk_builder_get_object(builder, "entry_24");
+
+    GObject *wordlist = gtk_builder_get_object(builder, "wordlist");
 
 
     char ll_0[8];
@@ -158,16 +162,16 @@ int main(int argc, char *argv[])
     sprintf(ll_24, "%c", boggleBoard[24]);
 
 
-    gtk_label_set_text(GTK_LABEL(label0),  ll_0);
-    gtk_label_set_text(GTK_LABEL(label1),  ll_1);
-    gtk_label_set_text(GTK_LABEL(label2),  ll_2);
-    gtk_label_set_text(GTK_LABEL(label3),  ll_3);
-    gtk_label_set_text(GTK_LABEL(label4),  ll_4);
-    gtk_label_set_text(GTK_LABEL(label5),  ll_5);
-    gtk_label_set_text(GTK_LABEL(label6),  ll_6);
-    gtk_label_set_text(GTK_LABEL(label7),  ll_7);
-    gtk_label_set_text(GTK_LABEL(label8),  ll_8);
-    gtk_label_set_text(GTK_LABEL(label9),  ll_9);
+    gtk_label_set_text(GTK_LABEL(label0), ll_0);
+    gtk_label_set_text(GTK_LABEL(label1), ll_1);
+    gtk_label_set_text(GTK_LABEL(label2), ll_2);
+    gtk_label_set_text(GTK_LABEL(label3), ll_3);
+    gtk_label_set_text(GTK_LABEL(label4), ll_4);
+    gtk_label_set_text(GTK_LABEL(label5), ll_5);
+    gtk_label_set_text(GTK_LABEL(label6), ll_6);
+    gtk_label_set_text(GTK_LABEL(label7), ll_7);
+    gtk_label_set_text(GTK_LABEL(label8), ll_8);
+    gtk_label_set_text(GTK_LABEL(label9), ll_9);
     gtk_label_set_text(GTK_LABEL(label10), ll_10);
     gtk_label_set_text(GTK_LABEL(label11), ll_11);
     gtk_label_set_text(GTK_LABEL(label12), ll_12);
@@ -185,7 +189,23 @@ int main(int argc, char *argv[])
     gtk_label_set_text(GTK_LABEL(label24), ll_24);
 
 
+    GtkWidget *wordlist_labels[words->count];
+    int i = 0;
+    WordListObject *ptr;
+    ptr = words->head;
+    for (i = 0; i < words->count; ++i)
+    {
+
+        wordlist_labels[i] = gtk_label_new(ptr->str);
+        ptr = ptr->next;
+        gtk_container_add(GTK_CONTAINER(wordlist), wordlist_labels[i]);
+        gtk_widget_show(GTK_WIDGET(wordlist_labels[i]));
+    }
+
+
+
     gtk_widget_show(GTK_WIDGET(window));
+
 
     gtk_main();
 

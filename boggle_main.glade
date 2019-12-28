@@ -4,7 +4,7 @@
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkWindow" id="window">
     <property name="can_focus">False</property>
-    <property name="default_width">1200</property>
+    <property name="default_width">1500</property>
     <property name="default_height">900</property>
     <child>
       <placeholder/>
@@ -43,9 +43,7 @@
                     <property name="label" translatable="yes">A</property>
                     <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -60,10 +58,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -78,10 +75,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -96,10 +92,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -114,10 +109,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -132,10 +126,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -150,10 +143,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -168,10 +160,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -186,10 +177,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -204,10 +194,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -222,10 +211,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -240,10 +228,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -258,10 +245,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -276,10 +262,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -294,10 +279,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -312,10 +296,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -330,10 +313,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -348,10 +330,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -366,10 +347,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -384,10 +364,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -402,10 +381,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -420,10 +398,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -438,10 +415,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -456,10 +432,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -474,10 +449,9 @@
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="label" translatable="yes">A</property>
+                    <property name="single_line_mode">True</property>
                     <attributes>
-                      <attribute name="font-desc" value="Sans Bold 25"/>
-                      <attribute name="foreground" value="#000000000000"/>
-                      <attribute name="background" value="#ffffffffffff"/>
+                      <attribute name="font-desc" value="Sans Bold 30"/>
                     </attributes>
                   </object>
                   <packing>
@@ -491,6 +465,39 @@
           <packing>
             <property name="x">50</property>
             <property name="y">50</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="width_request">400</property>
+            <property name="height_request">650</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+            <property name="vscrollbar_policy">always</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkViewport">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <child>
+                  <object class="GtkListBox" id="wordlist">
+                    <property name="height_request">1000</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="vexpand">True</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">950</property>
+            <property name="y">100</property>
           </packing>
         </child>
       </object>
