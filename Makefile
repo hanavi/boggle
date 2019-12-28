@@ -1,4 +1,4 @@
-CFLAGS = -g
+CFLAGS = -g `pkg-config --cflags gtk+-3.0` `pkg-config --libs gtk+-3.0` -rdynamic
 
 all: boggle
 
