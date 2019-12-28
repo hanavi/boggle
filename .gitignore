@@ -5,3 +5,4 @@ test_board
 test_dict
 tags
 *.o
+*~
