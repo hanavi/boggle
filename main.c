@@ -9,6 +9,7 @@
 #include "solve.h"
 #include "board.h"
 
+
 void run_check(int argc, char *argv[])
 {
     int iter = 0;  // For iterating
@@ -77,6 +78,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+
     GObject *window = gtk_builder_get_object(builder, "window");
 
 
@@ -107,6 +109,9 @@ int main(int argc, char *argv[])
     GObject *label24 = gtk_builder_get_object(builder, "entry_24");
 
     GObject *wordlist = gtk_builder_get_object(builder, "wordlist");
+
+    GObject *menu_item_quit = gtk_builder_get_object(builder, "menu_item_quit");
+    g_signal_connect(G_OBJECT(menu_item_quit), "activate",G_CALLBACK(gtk_main_quit), NULL);
 
 
     char ll_0[8];
