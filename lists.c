@@ -1,6 +1,8 @@
-#include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+#include "lists.h"
 
 /* Create a new integer list */
 IntList * new_int_list()
@@ -304,4 +306,111 @@ char *pop_front_word_list(WordList *list)
         list->tail = NULL;
 
     return retStr;
+}
+
+
+void insert_alphabetical_word_list(WordList *list, char* str)
+{
+
+    WordListObject *step;
+    WordListObject *tail;
+    WordListObject *newItem;
+    WordListObject *lastItem;
+
+    char n,p,c;
+    int cLength = 0;
+    int nLength = 0;
+    int maxLen = 0;
+    int cmp = 0;
+
+    int i = 0;
+    int j = 0;
+    int check = 0;
+
+    list->count += 1;
+
+    newItem = new_word_list_object(str);
+
+    // If the list is empty
+    if (!list->tail)
+    {
+        list->head = newItem;
+        list->tail = newItem;
+        return;
+    }
+
+    // If the list is not empty
+    step = list->head;
+    lastItem = list->head;
+
+    cLength = strlen(str);
+
+    int cont = 0;
+
+    while (step)
+    {
+        cont = 0;
+        nLength = strlen(step->str);
+        maxLen = nLength > cLength ? cLength : nLength;
+
+        for ( i = 0; i < maxLen ; i++)
+        {
+            c = newItem->str[i];
+            n = step->str[i];
+
+            // if the current word comes before the next word in the list
+            if (c < n)
+            {
+                if (step == list->head)
+                {
+                    list->head = newItem;
+                    newItem->next = step;
+                }
+                else
+                {
+                    newItem->next = step;
+                    lastItem->next = newItem;
+                    newItem->prev = lastItem;
+                }
+                return;
+            }
+            else if (c > n)
+            {
+                lastItem = step;
+                step = step->next;
+                cont = 1;
+                break;
+            }
+
+        }
+        if (cont == 1)
+        {
+            continue;
+        }
+
+        if (nLength == cLength)
+        {
+            if (step == list->head)
+            {
+                list->head = newItem;
+                newItem->next = step;
+            }
+            else
+            {
+                newItem->next = step;
+                lastItem->next = newItem;
+                newItem->prev = lastItem;
+            }
+            return;
+        }
+
+        lastItem = step;
+        step = step->next;
+    }
+
+    lastItem->next = newItem;
+    newItem->prev = lastItem;
+    list->tail = newItem;
+
+
 }

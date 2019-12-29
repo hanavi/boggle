@@ -86,5 +86,6 @@ char *pop_back_word_list(WordList *list);
 
 char *pop_front_word_list(WordList *list);
 
+void insert_alphabetical_word_list(WordList *list, char* str);
 
 #endif

@@ -21,7 +21,10 @@ void check_path(Letters *dict, char *board, IntList * path, int n, WordList *wor
     }
 
     if (status == 1)
-        append_back_word_list(words, get_word_from_path(path, board));
+    {
+        // append_back_word_list(words, get_word_from_path(path, board));
+        insert_alphabetical_word_list(words, get_word_from_path(path,board));
+    }
 
     IntList *neighbors;
     IntListObject *step;

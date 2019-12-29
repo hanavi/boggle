@@ -61,7 +61,8 @@ int main(int argc, char *argv[])
     solve_boggle_board(boggleBoard, dict, words);
 
     print_boggle_board(boggleBoard);
-    print_word_list(words);
+    // print_word_list(words);
+    printf("Found %d words\n", words->count);
 
 
 
