@@ -10,4 +10,5 @@ Generate and solve a random boggle board
 
 ## TODO
 
-* Lots
+* Lots...
+* Fix all the memory leaks!
