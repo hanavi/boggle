@@ -14,7 +14,7 @@ char * generate_random_boggle_board()
 
     // Store the board in a character array
     char *board;
-    board = (char *)malloc(SIZE*SIZE*sizeof(char));
+    board = malloc(sizeof(char)*SIZE*SIZE);
 
     // Seed the random number generator (this isn't good for simultaneous runs)
     srand((unsigned) time(&t));
