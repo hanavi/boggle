@@ -7,7 +7,7 @@
 /* Create a new integer list */
 IntList * new_int_list()
 {
-    IntList *tmpList = (IntList *) malloc(sizeof(IntList));
+    IntList *tmpList = malloc(sizeof(IntList));
     tmpList->head = NULL;
     tmpList->tail = NULL;
     tmpList->count = 0;
@@ -19,7 +19,7 @@ IntList * new_int_list()
 IntListObject * new_int_list_object(int x)
 {
 
-    IntListObject *tmpListObject = (IntListObject *) malloc(sizeof(IntListObject));
+    IntListObject *tmpListObject = malloc(sizeof(IntListObject));
 
     // Set the default values
     tmpListObject->next = NULL;
@@ -167,7 +167,7 @@ int in_int_list(IntList *list, int x)
 /* Create a new word list */
 WordList * new_word_list()
 {
-    WordList *tmpList = (WordList *) malloc(sizeof(WordList));
+    WordList *tmpList = malloc(sizeof(WordList));
 
     tmpList->head = NULL;
     tmpList->tail = NULL;
@@ -180,7 +180,7 @@ WordList * new_word_list()
 WordListObject * new_word_list_object(char* str)
 {
 
-    WordListObject *tmpListObject = (WordListObject *) malloc(sizeof(WordListObject));
+    WordListObject *tmpListObject = malloc(sizeof(WordListObject));
 
     // Set the default values
     tmpListObject->next = NULL;
