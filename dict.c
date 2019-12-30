@@ -12,7 +12,7 @@ Letters * newLetters()
     int iter = 0;
 
     Letters *tmpLetters;
-    tmpLetters = (Letters *)malloc(sizeof(Letters));
+    tmpLetters = malloc(sizeof(Letters));
 
     // Set all the letters to NULL to begein with
     for (iter = 0; iter < 26; ++iter)
@@ -180,7 +180,7 @@ char *get_word_from_path(IntList* path, char *board)
     char c = 0;
     int bufSize = path->count + 1;
 
-    buf = (char *) malloc(bufSize*sizeof(char));
+    buf = malloc(sizeof(char)*bufSize);
 
 
     IntListObject *step;
