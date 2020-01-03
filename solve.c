@@ -23,7 +23,7 @@ void check_path(Letters *dict, char *board, IntList * path, int n, WordList *wor
     if (status == 1)
     {
         // append_back_word_list(words, get_word_from_path(path, board));
-        insert_alphabetical_word_list(words, get_word_from_path(path,board));
+        insert_alphabetical_word_list(words, get_word_from_path(path, board));
     }
 
     IntList *neighbors;
@@ -45,6 +45,9 @@ void check_path(Letters *dict, char *board, IntList * path, int n, WordList *wor
         step = step->next;
     }
 
+    clean_up_int_list(neighbors);
+    neighbors = NULL;
+
     pop_back_int_list(path);
 }
 
@@ -53,13 +56,12 @@ void solve_boggle_board(char *board, Letters *dict, WordList *words)
     int i;
     IntList *path;
 
-    path = new_int_list();
-
     for(i = 0; i < SIZE*SIZE; ++i)
     {
         path = new_int_list();
         check_path(dict, board, path, i, words);
-        free(path);
+        clean_up_int_list(path);
+        path = NULL;
     }
 }
 

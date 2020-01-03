@@ -12,7 +12,6 @@
 
 void run_check(int argc, char *argv[])
 {
-    int iter = 0;  // For iterating
     char buf[80];  // For storing the word to be checked
 
     // Load the dictionary
@@ -194,7 +193,6 @@ int main(int argc, char *argv[])
     gtk_label_set_text(GTK_LABEL(label23), ll_23);
     gtk_label_set_text(GTK_LABEL(label24), ll_24);
 
-
     GtkWidget *wordlist_labels[words->count];
     int i = 0;
     WordListObject *ptr;
@@ -207,14 +205,14 @@ int main(int argc, char *argv[])
         gtk_container_add(GTK_CONTAINER(wordlist), wordlist_labels[i]);
         gtk_widget_show(GTK_WIDGET(wordlist_labels[i]));
     }
-
-
+    ptr = NULL;
 
     gtk_widget_show(GTK_WIDGET(window));
-
-
     gtk_main();
 
+    clean_up_word_list(words);
+    clean_up_dict(dict);
+    free(boggleBoard);
 
     return 0;
 }

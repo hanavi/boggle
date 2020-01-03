@@ -54,7 +54,7 @@ void add_word(Letters *dict, char *buf)
 {
     int iter = 0;
     int count = strlen(buf);
-    char c = 0;
+    int c = 0;
     Letters *step = dict;
 
     // Add the letters of the words and move down a step as you go
@@ -106,8 +106,7 @@ int check_path_letters(Letters *dict, char *board, IntList *path)
 
     IntListObject *wordStep;
     Letters *dictStep;
-    char c;
-    int i;
+    int c;
 
     dictStep = dict;
     wordStep = path->head;
@@ -143,7 +142,7 @@ int check_path_letters(Letters *dict, char *board, IntList *path)
 int find_word(Letters *dict, char *word)
 {
     int iter = 0;
-    char c;
+    int c;
     Letters *step;
     int count = strlen(word);
 
@@ -182,7 +181,6 @@ char *get_word_from_path(IntList* path, char *board)
 
     buf = malloc(sizeof(char)*bufSize);
 
-
     IntListObject *step;
     step = path->head;
     while(step)
@@ -195,7 +193,18 @@ char *get_word_from_path(IntList* path, char *board)
     }
 
     buf[i] = '\0';
-    //printf("%s", buf);
+
     return buf;
 }
 
+void clean_up_dict(Letters *dict)
+{
+    int i;
+    for (i = 0; i < 26; ++i)
+    {
+        if(!dict->letters[i])
+            continue;
+        clean_up_dict(dict->letters[i]);
+    }
+    free(dict->letters);
+}

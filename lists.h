@@ -72,6 +72,8 @@ int pop_front_int_list(IntList *list);
 
 int in_int_list(IntList *list, int x);
 
+void clean_up_int_list(IntList *list);
+
 WordList * new_word_list();
 
 WordListObject * new_word_list_object(char* str);
@@ -87,5 +89,7 @@ char *pop_back_word_list(WordList *list);
 char *pop_front_word_list(WordList *list);
 
 void insert_alphabetical_word_list(WordList *list, char* str);
+
+void clean_up_word_list(WordList *list);
 
 #endif

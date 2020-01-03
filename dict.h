@@ -1,4 +1,3 @@
-
 #ifndef DICT_H_
 #define DICT_H_
 
@@ -30,5 +29,7 @@ int find_word(Letters *dict, char *word);
 int check_path_letters(Letters *dict, char *board, IntList *path);
 
 char *get_word_from_path(IntList* path, char *board);
+
+void clean_up_dict(Letters *dict);
 
 #endif

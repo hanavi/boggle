@@ -7,7 +7,6 @@
 int check_neighbors()
 {
     char * board = generate_random_boggle_board();
-    char c;
     int n;
 
     char buf[8];

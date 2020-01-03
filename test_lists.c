@@ -43,8 +43,8 @@ void test_int_list()
     }
 
     printf("\n");
-    printf("head: %d\n", list->head);
-    printf("tail: %d\n", list->tail);
+    printf("head: %p\n", list->head);
+    printf("tail: %p\n", list->tail);
     printf("\n\n");
     free(list);
 
@@ -63,8 +63,8 @@ void test_int_list()
         printf("%d ", x);
     }
     printf("\n");
-    printf("head: %d\n", list->head);
-    printf("tail: %d\n", list->tail);
+    printf("head: %p\n", list->head);
+    printf("tail: %p\n", list->tail);
     printf("\n\n");
     free(list);
 
@@ -83,8 +83,8 @@ void test_int_list()
         printf("%d ", x);
     }
     printf("\n");
-    printf("head: %d\n", list->head);
-    printf("tail: %d\n", list->tail);
+    printf("head: %p\n", list->head);
+    printf("tail: %p\n", list->tail);
     printf("\n\n");
     free(list);
 
@@ -103,8 +103,8 @@ void test_int_list()
         printf("%d ", x);
     }
     printf("\n");
-    printf("head: %d\n", list->head);
-    printf("tail: %d\n", list->tail);
+    printf("head: %p\n", list->head);
+    printf("tail: %p\n", list->tail);
     printf("\n\n");
     free(list);
 

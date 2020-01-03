@@ -34,7 +34,6 @@ IntListObject * new_int_list_object(int x)
 void print_int_list(IntList *list)
 {
 
-    int i = 0;
     IntListObject *step;
     step = list->head;
 
@@ -164,6 +163,21 @@ int in_int_list(IntList *list, int x)
     return 0;
 }
 
+void clean_up_int_list(IntList *list)
+{
+    if (!list)
+        return;
+
+    IntListObject * step = list->head;
+
+    while(step)
+    {
+        step = step->next;
+        pop_front_int_list(list);
+    }
+    free(list);
+}
+
 /* Create a new word list */
 WordList * new_word_list()
 {
@@ -196,7 +210,6 @@ WordListObject * new_word_list_object(char* str)
 void print_word_list(WordList *list)
 {
 
-    int i = 0;
     WordListObject *step;
     step = list->head;
 
@@ -313,19 +326,15 @@ void insert_alphabetical_word_list(WordList *list, char* str)
 {
 
     WordListObject *step;
-    WordListObject *tail;
     WordListObject *newItem;
     WordListObject *lastItem;
 
-    char n,p,c;
+    int i = 0;
+    char n,c;
     int cLength = 0;
     int nLength = 0;
     int maxLen = 0;
-    int cmp = 0;
 
-    int i = 0;
-    int j = 0;
-    int check = 0;
 
     list->count += 1;
 
@@ -411,6 +420,19 @@ void insert_alphabetical_word_list(WordList *list, char* str)
     lastItem->next = newItem;
     newItem->prev = lastItem;
     list->tail = newItem;
+}
 
+void clean_up_word_list(WordList *list)
+{
+    if (!list)
+        return;
 
+    WordListObject * step = list->head;
+
+    while(step)
+    {
+        step = step->next;
+        pop_front_word_list(list);
+    }
+    free(list);
 }
