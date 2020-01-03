@@ -79,6 +79,21 @@ int main(int argc, char *argv[])
     }
 
 
+
+    GtkCssProvider* css_provider = gtk_css_provider_new();
+    if(!gtk_css_provider_load_from_path(css_provider, "boggle.css", NULL))
+    {
+        g_object_unref(css_provider);
+    }
+    GdkDisplay* display = gdk_display_get_default();
+    GdkScreen* screen = gdk_display_get_default_screen(display);
+    gtk_style_context_add_provider_for_screen(screen,
+            GTK_STYLE_PROVIDER(css_provider),
+            GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+
+
+
     GObject *window = gtk_builder_get_object(builder, "window");
 
 
