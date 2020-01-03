@@ -14,7 +14,7 @@ int check_neighbors()
     print_boggle_board_numbers(board);
 
     IntList *ignore = new_int_list();
-    IntList *neighbors = get_neighbors(0, ignore);
+    IntList *neighbors; // = get_neighbors(0, ignore);
 
     // Set a couple of entries to ignore
     append_back_int_list(ignore,5);
@@ -32,8 +32,11 @@ int check_neighbors()
         printf("neighbors: ");
         print_int_list(neighbors);
 
-        free(neighbors);
+        clean_up_int_list(neighbors);
     }
+
+    clean_up_int_list(ignore);
+    free(board);
 }
 
 

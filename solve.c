@@ -34,6 +34,7 @@ void check_path(Letters *dict, char *board, IntList * path, int n, WordList *wor
     if (neighbors->count < 1)
     {
         pop_back_int_list(path);
+        clean_up_int_list(neighbors);
         return;
     }
 

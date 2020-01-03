@@ -67,6 +67,9 @@ void test_string()
     status = check_path_letters(dict, board, path);
     printf("%d\n", status);
 
+    clean_up_dict(dict);
+    clean_up_int_list(path);
+
 }
 
 

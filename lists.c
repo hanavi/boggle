@@ -428,11 +428,13 @@ void clean_up_word_list(WordList *list)
         return;
 
     WordListObject * step = list->head;
+    char *str;
 
     while(step)
     {
         step = step->next;
-        pop_front_word_list(list);
+        str = pop_front_word_list(list);
+        free(str);
     }
     free(list);
 }

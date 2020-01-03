@@ -19,6 +19,9 @@ void test_word_list()
 
     print_word_list(list);
 
+    clean_up_word_list(list);
+
+
 }
 
 /* Check some int list functions */
@@ -114,7 +117,7 @@ void test_int_list()
 int main(int argc, char *argv[])
 {
 
-    // test_int_list();
+    test_int_list();
     test_word_list();
 
     return 0;
