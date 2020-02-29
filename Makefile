@@ -1,4 +1,6 @@
-CFLAGS = -g `pkg-config --cflags gtk+-3.0` `pkg-config --libs gtk+-3.0` -rdynamic -Wall -Werror
+CFLAGS = -g -pg `pkg-config --cflags gtk+-3.0` `pkg-config --libs gtk+-3.0` -rdynamic -Wall -Werror
+#CFLAGS = -O2 -g -pg `pkg-config --cflags gtk+-3.0` `pkg-config --libs gtk+-3.0` -rdynamic -Wall -Werror
+#CFLAGS = -O3 `pkg-config --cflags gtk+-3.0` `pkg-config --libs gtk+-3.0` -rdynamic -Wall
 
 all: boggle
 
@@ -41,4 +43,4 @@ test_dict: test_dict.o dict.o board.o lists.o
 tests: test_lists test_board test_dict
 
 clean:
-	-@rm -rf *.o boggle test_dict test_board test_lists main 2>/dev/null || true
+	-@rm -rf *~ *.o boggle test_dict test_board test_lists main 2>/dev/null || true
